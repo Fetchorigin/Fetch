@@ -6,7 +6,11 @@ templates.user = [
     '<p>Status: <%= status %></p>',
     '<p>Driver: <%= driverId %></p>',
     '<div class="deleteButton">Completed</div>',
+<<<<<<< HEAD
     '<div class="deleteButton" data-id=<%= id %> >Cancel</div>',
+=======
+    '<div class="deleteButton" data-id= <%= id %>>Cancel</div>',
+>>>>>>> 76a9e01547997dd095f0e141234a921e69ccc3ba
   '</div>'
 ].join("");
 
@@ -24,4 +28,3 @@ templates.user = [
      '<div class="acceptButton">Accept</div>',
    '</div>',
   ].join("");
-
