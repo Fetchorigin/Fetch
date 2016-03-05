@@ -6,24 +6,13 @@ $(document).ready(function() {
 var fetchApp = {
   urls: {
     // URL ROUTES JAMES CREATES WILL GO HERE
-<<<<<<< HEAD
-    user:          '/user',
-    driver:        '/driver',
-    driverRequest:  '/driver-requests',
-    loginDriver:   '/login-Driver',
-    loginUser:     '/login-User',
-    userRequests:  '/user-requests',
-    request:       '/request',
-    update: '/update-request',
-    delete: '/delete-request',
-=======
+
     user:              '/user',
     loginDriver:       '/login-Driver',
     loginUser:         '/login-User',
     driver:            '/driver',
     userRequests:      '/user-requests',
     request:           '/request',
->>>>>>> e794a2037b35c2291510edda564f642900ff58fa
   },
 
 
@@ -41,8 +30,7 @@ var fetchApp = {
     // ALL OUR CLICK EVENTS WILL LIVE HERE
 
     // ON LOGIN FORM SUBMISSION
-<<<<<<< HEAD
-=======
+
     $('#letsGo').on('click', function () {
       var username = "";
       if ($('select[name=userType]').val() === 'user' &&
@@ -79,7 +67,6 @@ var fetchApp = {
                   $('#loginPage').addClass('active');
                   $('#loginPage').siblings().removeClass('active');
     });
->>>>>>> e794a2037b35c2291510edda564f642900ff58fa
 
   $('#letsGo').on('click', function () {
        var username = "";
@@ -122,11 +109,16 @@ var fetchApp = {
 
     // ON DELETE/COMPLETE REQUEST BUTTON CLICK (USER SIDE)
       // delete request from database and DOM
+      $('#userRequests').on('click', '.deleteButton',function(request){
+        fetchApp.deleteRequest($(this).data("id"));
+        fetchApp.getUserRequests();
+
+
+      });
 
     // ON ACCEPT REQUEST BUTTON CLICK (DRIVER SIDE)
       // change request status to accepted
   },
-
 
   loginDriver: function(driverId) {
     $.ajax({
